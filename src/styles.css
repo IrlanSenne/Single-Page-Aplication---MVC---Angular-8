@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files 
+
+
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Caveat', cursive;
+font-family: 'Kalam', cursive;
+
+*/
+body{
+    padding: 10px;
+    font-family: 'Kalam', cursive;
+    background-color: rgb(233, 232, 164);
+}
+footer{
+    
+    font-family: 'Josefin Sans', sans-serif;
+}
