@@ -1,0 +1,22 @@
+h6 {
+    color: darkgoldenrod;
+}
+h3{
+    font-weight: bolder;
+}
+h5{
+    color: darkkhaki;
+}
+b{
+    color: rgb(163, 107, 39);
+    font-weight: bold;
+}
+.p1{
+    padding: 20px;
+}
+.content1{
+    background-color: rgba(226, 185, 172, 0.2);
+    margin: 5px;
+    padding: 5px;
+    border-radius: 10px;
+}

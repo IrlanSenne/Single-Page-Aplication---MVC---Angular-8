@@ -1,0 +1,23 @@
+h1 {
+    font-family: 'Paytone One', sans-serif;   
+    color: rgba(84, 109, 39, 0.7);
+    letter-spacing: 10px;
+    font-weight: bold;
+    text-shadow: 1px 2px 3px #000;
+}
+p {
+    color: rgb(167, 141, 76);
+    font-size: 30px;
+}
+span{
+    letter-spacing: 20px;
+    font-weight: lighter;
+    color: rgba(170, 194, 125, 0.7);
+
+}
+.sombraInt {
+    box-shadow: 10px 10px 30px 20px  rgb(209, 122, 101);
+    border-radius: 5px;
+    margin-bottom: 100px;
+    margin-top: 50px;
+}
