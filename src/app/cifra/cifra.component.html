@@ -2,9 +2,10 @@
     <div class="content content1">
 <h3 class="text-muted">Tu És Soberano</h3>
 <h5>Asaph Borba</h5>
-<h6 class="mb-2">Tom: G</h6>
-</div>
-<pre><b>G</b>        <b>D/F#</b>           <b>Em</b>
+<!-- Colocar um sinal de " + " em cada nota para aumentar meio tom quando acionado no tom-->
+<button class="btn btn-outline.light" (click)="trocaCifra(2)">Tom : </button>{{n.G}}
+</div><br>
+<pre><b>{{n.G}}</b>        <b>D/F#</b>           <b>Em</b>
     Tu és, soberano sobre a terra
              <b>D</b>             <b>C9</b>
     Sobre o céus tu és Senhor

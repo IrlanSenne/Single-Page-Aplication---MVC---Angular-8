@@ -5,7 +5,14 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './cifra.component.html',
   styleUrls: ['./cifra.component.css']
 })
-export class CifraComponent implements OnInit {
+export class CifraComponent implements OnInit {  
+
+  n = [ 'C','D','E','F','G','A','B' ]
+  
+
+  trocaCifra (nota){        
+     console.log(this.n[nota + 1])
+  }
 
   constructor() { }
 
