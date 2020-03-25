@@ -3,32 +3,51 @@
 <h3 class="text-muted">Tu És Soberano</h3>
 <h5>Asaph Borba</h5>
 <!-- Colocar um sinal de " + " em cada nota para aumentar meio tom quando acionado no tom-->
-<button class="btn btn-outline.light" (click)="trocaCifra(2)">Tom : </button>{{n.G}}
+
+<!-- =========== TOM =====================-->
+<button class="btn btn-outline-secondary dropdown-toggle" 
+type="button" data-toggle="dropdown" aria-haspopup="true" 
+aria-expanded="false">Tom</button> {{G}}
+
+<div class="dropdown-menu">
+  <a class="dropdown-item" (click)="trocaCifra(c)">C</a> <a class="dropdown-item" (click)="trocaCifra(cs)">C#</a>
+  <a class="dropdown-item" (click)="trocaCifra(d)">D</a> <a class="dropdown-item" (click)="trocaCifra(ds)">D#</a>
+  <a class="dropdown-item" (click)="trocaCifra(e)">E</a> 
+  <a class="dropdown-item" (click)="trocaCifra(f)">F</a> <a class="dropdown-item" (click)="trocaCifra(fs)">F#</a>
+  <a class="dropdown-item" (click)="trocaCifra(g)">G</a> <a class="dropdown-item" (click)="trocaCifra(gs)">G#</a>
+  <a class="dropdown-item" (click)="trocaCifra(a)">A</a> <a class="dropdown-item" (click)="trocaCifra(bb)">A#</a>
+  <a class="dropdown-item" (click)="trocaCifra(b)">B</a>
+  <div role="separator" class="dropdown-divider"></div>
+  <a class="dropdown-item" href="#">Original</a>
+</div>
 </div><br>
-<pre><b>{{n.G}}</b>        <b>D/F#</b>           <b>Em</b>
-    Tu és, soberano sobre a terra
-             <b>D</b>             <b>C9</b>
+<!-- =========== Música ====================-->
+<div class="container">
+<pre><b>{{G}}</b>        <b>{{D}}/{{Fs}}</b>           <b>{{E}}m</b>
+    Tu És, soberano sobre a terra
+             <b>{{D}}</b>             <b>{{C}}9</b>
     Sobre o céus tu és Senhor
-    <b>D</b>    <b>G</b>     <b>D</b>
+    <b>{{D}}</b>    <b>{{G}}</b>     <b>{{D}}</b>
     Absoluto
     
-    <b>G</b>           <b>D/F#</b>      <b>Em</b>
+    <b>{{G}}</b>           <b>{{D}}/{{Fs}}</b>      <b>{{E}}m</b>
     Tudo, que existe acontece
-         <b>D</b>            <b>C9</b>
+         <b>{{D}}</b>            <b>{{C}}9</b>
     Tu, sabes muito bem
-    <b>D</b>          <b>G</b>
+    <b>{{D}}</b>          <b>{{G}}</b>
     Tu, és tremendo
     
-         <b>Am</b>  <b>C</b>         <b>G</b>
+<b>{{A}}m</b>     <b>{{C}}</b>     <b>{{G}}</b>
     Mas, ape-sar dessa glória que tem
-    <b>Am</b>        <b>Bm</b>  <b>C</b>     <b>G</b>          <b>D/F#</b>
+    <b>{{A}}m</b>        <b>{{B}}m</b>  <b>{{C}}</b>     <b>{{G}}</b>          <b>{{D}}/{{Fs}}</b>
     Tu, te impor-tas comigo também
     
-       <b>Em7</b>            <b>Bm7</b>
+       <b>{{E}}m7</b>            <b>{{B}}m7</b>
     E, esse amor tão grande
-      <b>C</b>         <b>C#°</b>       <b>D</b>
+      <b>{{C}}</b>         <b>{{Cs}}°</b>       <b>{{D}}</b>
     Eleva-me amarra-me a ti
     
-    <b>C/D</b>        <b>D</b>   <b>G</b>
+    <b>{{C}}/{{D}}</b>        <b>{{D}}</b>   <b>{{G}}</b>
     Tu és, tremen-do</pre>
+</div>
 </div>
