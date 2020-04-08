@@ -10,6 +10,8 @@ import { CifraComponent } from './cifra/cifra.component';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from '../environments/environment';
+import { HttpClientModule } from "@angular/common/http";
+import { CrudService } from './cifra/crud.service';
 
 @NgModule({
   declarations: [
@@ -24,8 +26,10 @@ import { environment } from '../environments/environment';
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
+    HttpClientModule
+    
   ],
-  providers: [],
+  providers: [CrudService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -23,6 +23,15 @@ aria-expanded="false">Tom</button> {{G}}
 </div><br>
 <!-- =========== Música ====================-->
 <div class="container">
+
+<div *ngFor="let music of musics" #preForm>
+  <pre >{{music.endereco}}</pre>
+</div>
+
+
+
+
+
 <pre><b>{{G}}</b>        <b>{{D}}/{{Fs}}</b>           <b>{{E}}m</b>
     Tu És, soberano sobre a terra
              <b>{{D}}</b>             <b>{{C}}9</b>
@@ -47,7 +56,7 @@ aria-expanded="false">Tom</button> {{G}}
       <b>{{C}}</b>         <b>{{Cs}}°</b>       <b>{{D}}</b>
     Eleva-me amarra-me a ti
     
-    <b>{{C}}/{{D}}</b>        <b>{{D}}</b>   <b>{{G}}</b>
+ <b>{{C}}/{{D}}</b>        <b>{{D}}</b>   <b>{{G}}</b>
     Tu és, tremen-do</pre>
 </div>
 </div>

@@ -1,7 +1,24 @@
 .a1{
     font-size: 20px;
+ 
+}
+.a1:hover{
+    background-color: tomato;
+    border-radius: 10px;
+    padding: 10px;
 }
 nav{
-    margin: 10px;
-    background-color: brown;
+    margin: 10px;  
+
+}
+.divMaster{
+    min-width: 100%;
+    min-height: 100%;
+}
+img{
+    width:100%;
+}
+
+a{
+    letter-spacing: 3px;
 }

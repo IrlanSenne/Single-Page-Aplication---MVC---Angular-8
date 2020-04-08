@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Router } from '@angular/router';
+import { CrudService } from './crud.service';
 
 @Component({
   selector: 'app-cifra',
@@ -6,6 +8,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cifra.component.css']
 })
 export class CifraComponent implements OnInit {  
+
+
+ 
+
 
   n = [ 'C','C#','D','D#','E','F','F#','G','G#','A','A#','B' ]
 
@@ -197,9 +203,24 @@ export class CifraComponent implements OnInit {
     }
   }
 
-  constructor() { }
+  constructor(private crudService: CrudService,
+               private router: Router,
+             ) { }
+
+musics: any[]
+
 
   ngOnInit() {
+
+
+    this.crudService.getMusic().subscribe((data:any[]) => {
+     
+     this.musics = data;
+    
+
+      console.log(this.musics);
+    })
+
     this.C = this.n[0]
     this.Cs = this.n[1]
     this.D = this.n[2]
