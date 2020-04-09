@@ -1,6 +1,5 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { Router } from '@angular/router';
-import { CrudService } from './crud.service';
+import { Component, OnInit, ViewChild, ElementRef} from '@angular/core';
+
 
 @Component({
   selector: 'app-cifra',
@@ -9,9 +8,20 @@ import { CrudService } from './crud.service';
 })
 export class CifraComponent implements OnInit {  
 
+@ViewChild('musicPre',{static: true}) musicPre:ElementRef<any>;
 
- 
-
+cifra_c: any
+cifra_cs: any
+cifra_d: any
+cifra_ds: any
+cifra_e: any
+cifra_f: any
+cifra_fs: any
+cifra_g: any
+cifra_gs: any
+cifra_a: any
+cifra_bb: any
+cifra_b: any
 
   n = [ 'C','C#','D','D#','E','F','F#','G','G#','A','A#','B' ]
 
@@ -42,9 +52,57 @@ export class CifraComponent implements OnInit {
   bb: string = this.tons[10]
   b: string = this.tons[11]
 
+  gCifra(){
+    var string = this.musicPre.nativeElement.innerHTML
+    var resultado = string.replace(/G/g , "A");
+    resultado = resultado.replace(/Em/g, "B")
+  
+    this.musicPre.nativeElement.innerHTML = resultado
+ 
+}
+
+recebeCifra1(){
+  this.cifra_c = this.musicPre.nativeElement.innerHTML
+}
+recebeCifra2(){
+  this.cifra_cs = this.musicPre.nativeElement.innerHTML
+}
+recebeCifra3(){
+  this.cifra_d = this.musicPre.nativeElement.innerHTML
+}
+recebeCifra4(){
+  this.cifra_ds = this.musicPre.nativeElement.innerHTML
+}
+recebeCifra5(){
+  this.cifra_e = this.musicPre.nativeElement.innerHTML
+}
+recebeCifra6(){
+  this.cifra_f = this.musicPre.nativeElement.innerHTML
+}
+recebeCifra7(){
+  this.cifra_fs = this.musicPre.nativeElement.innerHTML
+}
+recebeCifra8(){
+  this.cifra_g = this.musicPre.nativeElement.innerHTML
+}
+recebeCifra9(){
+  this.cifra_gs = this.musicPre.nativeElement.innerHTML
+}
+recebeCifra10(){
+  this.cifra_a = this.musicPre.nativeElement.innerHTML
+}
+recebeCifra11(){
+  this.cifra_bb = this.musicPre.nativeElement.innerHTML
+}
+recebeCifra12(){
+  this.cifra_b = this.musicPre.nativeElement.innerHTML
+}
+
   trocaCifra (tom){ 
   
     if(tom == 'la'){
+
+
       this.C = this.n[2]
       this.Cs = this.n[3]
       this.D = this.n[4]
@@ -57,7 +115,9 @@ export class CifraComponent implements OnInit {
       this.A = this.n[11]
       this.As = this.n[0]
       this.B = this.n[1]
+ 
     }else if(tom == 'las'){
+    
       this.C = this.n[3]
       this.Cs = this.n[4]
       this.D = this.n[5]
@@ -70,7 +130,9 @@ export class CifraComponent implements OnInit {
       this.A = this.n[0]
       this.As = this.n[1]
       this.B = this.n[2]
+  
     } else if(tom == 'si'){
+
       this.C = this.n[4]
       this.Cs = this.n[5]
       this.D = this.n[6]
@@ -83,7 +145,9 @@ export class CifraComponent implements OnInit {
       this.A = this.n[1]
       this.As = this.n[2]
       this.B = this.n[3]
+  
     } else if(tom == 'do'){
+  
       this.C = this.n[5]
       this.Cs = this.n[6]
       this.D = this.n[7]
@@ -96,7 +160,10 @@ export class CifraComponent implements OnInit {
       this.A = this.n[2]
       this.As = this.n[3]
       this.B = this.n[4]
+    
+    
     }else if(tom == 'dos'){
+
       this.C = this.n[6]
       this.Cs = this.n[7]
       this.D = this.n[8]
@@ -109,7 +176,10 @@ export class CifraComponent implements OnInit {
       this.A = this.n[3]
       this.As = this.n[4]
       this.B = this.n[5]
+   
+     
     } else if(tom == 're'){
+  
       this.C = this.n[7]
       this.Cs = this.n[8]
       this.D = this.n[9]
@@ -122,7 +192,9 @@ export class CifraComponent implements OnInit {
       this.A = this.n[4]
       this.As = this.n[5]
       this.B = this.n[6]
+  
     }else if(tom == 'res'){
+
       this.C = this.n[8]
       this.Cs = this.n[9]
       this.D = this.n[10]
@@ -135,7 +207,9 @@ export class CifraComponent implements OnInit {
       this.A = this.n[5]
       this.As = this.n[6]
       this.B = this.n[7]
+   
     }else if(tom == 'mi'){
+   
       this.C = this.n[9]
       this.Cs = this.n[10]
       this.D = this.n[11]
@@ -148,7 +222,9 @@ export class CifraComponent implements OnInit {
       this.A = this.n[6]
       this.As = this.n[7]
       this.B = this.n[8]
+    
     }else if(tom == 'fa'){
+  
       this.C = this.n[10]
       this.Cs = this.n[11]
       this.D = this.n[0]
@@ -161,7 +237,9 @@ export class CifraComponent implements OnInit {
       this.A = this.n[7]
       this.As = this.n[8]
       this.B = this.n[9]
+
     }else if(tom == 'fas'){
+   
       this.C = this.n[11]
       this.Cs = this.n[0]
       this.D = this.n[1]
@@ -174,7 +252,9 @@ export class CifraComponent implements OnInit {
       this.A = this.n[8]
       this.As = this.n[9]
       this.B = this.n[10]
+     
     }else if(tom == 'sol'){
+     
       this.C = this.n[0]
       this.Cs = this.n[1]
       this.D = this.n[2]
@@ -187,9 +267,11 @@ export class CifraComponent implements OnInit {
       this.A = this.n[9]
       this.As = this.n[10]
       this.B = this.n[11]
+  
     }else if(tom == 'sols'){
+   
       this.C = this.n[1]
-      this.Cs = this.n[2]
+      this.Cs = this.n[2] 
       this.D = this.n[3]
       this.Ds = this.n[4]
       this.E = this.n[5]
@@ -200,26 +282,13 @@ export class CifraComponent implements OnInit {
       this.A = this.n[10]
       this.As = this.n[11]
       this.B = this.n[0]
+  
     }
   }
 
-  constructor(private crudService: CrudService,
-               private router: Router,
-             ) { }
-
-musics: any[]
-
+  constructor( ) { }
 
   ngOnInit() {
-
-
-    this.crudService.getMusic().subscribe((data:any[]) => {
-     
-     this.musics = data;
-    
-
-      console.log(this.musics);
-    })
 
     this.C = this.n[0]
     this.Cs = this.n[1]

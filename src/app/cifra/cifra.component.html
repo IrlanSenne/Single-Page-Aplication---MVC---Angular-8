@@ -22,14 +22,7 @@ aria-expanded="false">Tom</button> {{G}}
 </div>
 </div><br>
 <!-- =========== Música ====================-->
-<div class="container">
-
-<div *ngFor="let music of musics" #preForm>
-  <pre >{{music.endereco}}</pre>
-</div>
-
-
-
+<div id="musicPre" #musicPre class="container">
 
 
 <pre><b>{{G}}</b>        <b>{{D}}/{{Fs}}</b>           <b>{{E}}m</b>
@@ -59,4 +52,90 @@ aria-expanded="false">Tom</button> {{G}}
  <b>{{C}}/{{D}}</b>        <b>{{D}}</b>   <b>{{G}}</b>
     Tu és, tremen-do</pre>
 </div>
+<button class="btn btn-primary" (click)="gCifra()">Ver</button>
+<br>
+<div id="div1">O texto acima foi criado dinamicamente.</div>
+</div>
+<div>
+  <h1>------------ C -------------------</h1>
+<p [innerHTML]="cifra_c"></p>
+  <button class="btn btn-success" (click)="recebeCifra1()">Enviar</button>
+  <br>
+</div>
+
+<div>
+  <h1>------------ C# -------------------</h1>
+<p [innerHTML]="cifra_cs"></p>
+  <button class="btn btn-success" (click)="recebeCifra2()">Enviar</button>
+  <br>
+</div>
+
+<div>
+  <h1>------------ D -------------------</h1>
+<p [innerHTML]="cifra_d"></p>
+  <button class="btn btn-success" (click)="recebeCifra3()">Enviar</button>
+  <br>
+</div>
+
+<div>
+  <h1>------------ D# -------------------</h1>
+<p [innerHTML]="cifra_ds"></p>
+  <button class="btn btn-success" (click)="recebeCifra4()">Enviar</button>
+  <br>
+</div>
+
+<div>
+  <h1>------------ E -------------------</h1>
+<p [innerHTML]="cifra_e"></p>
+  <button class="btn btn-success" (click)="recebeCifra5()">Enviar</button>
+  <br>
+</div>
+
+<div>
+  <h1>------------ F -------------------</h1>
+<p [innerHTML]="cifra_f"></p>
+  <button class="btn btn-success" (click)="recebeCifra6()">Enviar</button>
+  <br>
+</div>
+
+<div>
+  <h1>------------ F# -------------------</h1>
+<p [innerHTML]="cifra_fs"></p>
+  <button class="btn btn-success" (click)="recebeCifra7()">Enviar</button>
+  <br>
+</div>
+
+<div>
+  <h1>------------ G -------------------</h1>
+<p [innerHTML]="cifra_g"></p>
+  <button class="btn btn-success" (click)="recebeCifra8()">Enviar</button>
+  <br>
+</div>
+
+<div>
+  <h1>------------ G# -------------------</h1>
+<p [innerHTML]="cifra_gs"></p>
+  <button class="btn btn-success" (click)="recebeCifra9()">Enviar</button>
+  <br>
+</div>
+
+<div>
+  <h1>------------ A -------------------</h1>
+<p [innerHTML]="cifra_a"></p>
+  <button class="btn btn-success" (click)="recebeCifra10()">Enviar</button>
+  <br>
+</div>
+
+<div>
+  <h1>------------ A# -------------------</h1>
+<p [innerHTML]="cifra_bb"></p>
+  <button class="btn btn-success" (click)="recebeCifra11()">Enviar</button>
+  <br>
+</div>
+
+<div>
+  <h1>------------ B -------------------</h1>
+<p [innerHTML]="cifra_b"></p>
+  <button class="btn btn-success" (click)="recebeCifra12()">Enviar</button>
+  <br>
 </div>
