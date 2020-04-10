@@ -7,135 +7,26 @@
 <!-- =========== TOM =====================-->
 <button class="btn btn-outline-secondary dropdown-toggle" 
 type="button" data-toggle="dropdown" aria-haspopup="true" 
-aria-expanded="false">Tom</button> {{G}}
+aria-expanded="false">Tom</button> {{tom}}
 
 <div class="dropdown-menu">
-  <a class="dropdown-item" (click)="trocaCifra(c)">C</a> <a class="dropdown-item" (click)="trocaCifra(cs)">C#</a>
-  <a class="dropdown-item" (click)="trocaCifra(d)">D</a> <a class="dropdown-item" (click)="trocaCifra(ds)">D#</a>
-  <a class="dropdown-item" (click)="trocaCifra(e)">E</a> 
-  <a class="dropdown-item" (click)="trocaCifra(f)">F</a> <a class="dropdown-item" (click)="trocaCifra(fs)">F#</a>
-  <a class="dropdown-item" (click)="trocaCifra(g)">G</a> <a class="dropdown-item" (click)="trocaCifra(gs)">G#</a>
-  <a class="dropdown-item" (click)="trocaCifra(a)">A</a> <a class="dropdown-item" (click)="trocaCifra(bb)">A#</a>
-  <a class="dropdown-item" (click)="trocaCifra(b)">B</a>
+  <a class="dropdown-item" (click)="trocaCifra('C')">C</a> <a class="dropdown-item" (click)="trocaCifra('C#')">C# | Db</a>
+  <a class="dropdown-item" (click)="trocaCifra('D')">D</a> <a class="dropdown-item" (click)="trocaCifra('D#')">D# | Eb</a>
+  <a class="dropdown-item" (click)="trocaCifra('E')">E</a> 
+  <a class="dropdown-item" (click)="trocaCifra('F')">F</a> <a class="dropdown-item" (click)="trocaCifra('F#')">F# | Gb</a>
+  <a class="dropdown-item" (click)="trocaCifra('G')">G</a> <a class="dropdown-item" (click)="trocaCifra('G#')">G# | Ab</a>
+  <a class="dropdown-item" (click)="trocaCifra('A')">A</a> <a class="dropdown-item" (click)="trocaCifra('A#')">A# | Bb</a>
+  <a class="dropdown-item" (click)="trocaCifra('B')">B</a>
   <div role="separator" class="dropdown-divider"></div>
   <a class="dropdown-item" href="#">Original</a>
 </div>
 </div><br>
 <!-- =========== Música ====================-->
-<div id="musicPre" #musicPre class="container">
 
+<div class="text-center" *ngFor="let music of musics" >
+   
+  <p [innerHTML]="music.endereco"></p>
 
-<pre><b>{{G}}</b>        <b>{{D}}/{{Fs}}</b>           <b>{{E}}m</b>
-    Tu És, soberano sobre a terra
-             <b>{{D}}</b>             <b>{{C}}9</b>
-    Sobre o céus tu és Senhor
-    <b>{{D}}</b>    <b>{{G}}</b>     <b>{{D}}</b>
-    Absoluto
-    
-    <b>{{G}}</b>           <b>{{D}}/{{Fs}}</b>      <b>{{E}}m</b>
-    Tudo, que existe acontece
-         <b>{{D}}</b>            <b>{{C}}9</b>
-    Tu, sabes muito bem
-    <b>{{D}}</b>          <b>{{G}}</b>
-    Tu, és tremendo
-    
-<b>{{A}}m</b>     <b>{{C}}</b>     <b>{{G}}</b>
-    Mas, ape-sar dessa glória que tem
-    <b>{{A}}m</b>        <b>{{B}}m</b>  <b>{{C}}</b>     <b>{{G}}</b>          <b>{{D}}/{{Fs}}</b>
-    Tu, te impor-tas comigo também
-    
-       <b>{{E}}m7</b>            <b>{{B}}m7</b>
-    E, esse amor tão grande
-      <b>{{C}}</b>         <b>{{Cs}}°</b>       <b>{{D}}</b>
-    Eleva-me amarra-me a ti
-    
- <b>{{C}}/{{D}}</b>        <b>{{D}}</b>   <b>{{G}}</b>
-    Tu és, tremen-do</pre>
 </div>
-<button class="btn btn-primary" (click)="gCifra()">Ver</button>
-<br>
-<div id="div1">O texto acima foi criado dinamicamente.</div>
-</div>
-<div>
-  <h1>------------ C -------------------</h1>
-<p [innerHTML]="cifra_c"></p>
-  <button class="btn btn-success" (click)="recebeCifra1()">Enviar</button>
-  <br>
-</div>
-
-<div>
-  <h1>------------ C# -------------------</h1>
-<p [innerHTML]="cifra_cs"></p>
-  <button class="btn btn-success" (click)="recebeCifra2()">Enviar</button>
-  <br>
-</div>
-
-<div>
-  <h1>------------ D -------------------</h1>
-<p [innerHTML]="cifra_d"></p>
-  <button class="btn btn-success" (click)="recebeCifra3()">Enviar</button>
-  <br>
-</div>
-
-<div>
-  <h1>------------ D# -------------------</h1>
-<p [innerHTML]="cifra_ds"></p>
-  <button class="btn btn-success" (click)="recebeCifra4()">Enviar</button>
-  <br>
-</div>
-
-<div>
-  <h1>------------ E -------------------</h1>
-<p [innerHTML]="cifra_e"></p>
-  <button class="btn btn-success" (click)="recebeCifra5()">Enviar</button>
-  <br>
-</div>
-
-<div>
-  <h1>------------ F -------------------</h1>
-<p [innerHTML]="cifra_f"></p>
-  <button class="btn btn-success" (click)="recebeCifra6()">Enviar</button>
-  <br>
-</div>
-
-<div>
-  <h1>------------ F# -------------------</h1>
-<p [innerHTML]="cifra_fs"></p>
-  <button class="btn btn-success" (click)="recebeCifra7()">Enviar</button>
-  <br>
-</div>
-
-<div>
-  <h1>------------ G -------------------</h1>
-<p [innerHTML]="cifra_g"></p>
-  <button class="btn btn-success" (click)="recebeCifra8()">Enviar</button>
-  <br>
-</div>
-
-<div>
-  <h1>------------ G# -------------------</h1>
-<p [innerHTML]="cifra_gs"></p>
-  <button class="btn btn-success" (click)="recebeCifra9()">Enviar</button>
-  <br>
-</div>
-
-<div>
-  <h1>------------ A -------------------</h1>
-<p [innerHTML]="cifra_a"></p>
-  <button class="btn btn-success" (click)="recebeCifra10()">Enviar</button>
-  <br>
-</div>
-
-<div>
-  <h1>------------ A# -------------------</h1>
-<p [innerHTML]="cifra_bb"></p>
-  <button class="btn btn-success" (click)="recebeCifra11()">Enviar</button>
-  <br>
-</div>
-
-<div>
-  <h1>------------ B -------------------</h1>
-<p [innerHTML]="cifra_b"></p>
-  <button class="btn btn-success" (click)="recebeCifra12()">Enviar</button>
-  <br>
-</div>
+<h2>MusicaC</h2>
+<p [innerHTML]="musicaC"></p>

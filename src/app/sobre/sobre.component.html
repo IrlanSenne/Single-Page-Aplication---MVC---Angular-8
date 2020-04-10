@@ -1,15 +1,5 @@
 
 
-  <form [formGroup]="orderForm" novalidate>
-<div class="formGroup">
-    <input type="text" class="form-control " #music  formControlName="music" 
-    placeholder="música">
-</div>
-
-<button (click)="enviarMusica(orderForm.value)" class="btn btn-success">Send Music</button>
-           
-  </form>
-
   <div class="text-center" *ngFor="let music of musics" >
    
       <pre >{{music.endereco}}</pre>

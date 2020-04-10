@@ -28,8 +28,8 @@ export class SobreComponent implements OnInit {
   enviarMusica(musica){
    console.log(this.musics[0].endereco) 
   
-   var cifraAlterada = this.musics[0].endereco .replace(/G/g , "A");
-    cifraAlterada = cifraAlterada.replace(/<b>/g , "");
+   var cifraAlterada = this.musics[0].endereco .replace(/<b>G/g , "G#");
+    cifraAlterada = cifraAlterada.replace(/<\/b>/g , "");
     cifraAlterada = cifraAlterada.replace(/<\/b>/g , "");
    this.musics[0].endereco = cifraAlterada
   }
