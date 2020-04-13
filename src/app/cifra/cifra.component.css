@@ -2,15 +2,13 @@ h6 {
     color: darkgoldenrod;
 }
 h3{
+    color:#343A40;
     font-weight: bolder;
 }
 h5{
-    color: darkkhaki;
+    color: #FBB240;
 }
-b{
-    color: rgb(163, 107, 39);
-    font-weight: bold;
-}
+
 .p1{
     padding: 20px;
 }
@@ -19,4 +17,10 @@ b{
     margin: 5px;
     padding: 5px;
     border-radius: 10px;
+}
+
+.divmaster{
+
+width: 100%;
+height: 100%;
 }

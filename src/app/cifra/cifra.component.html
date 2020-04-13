@@ -1,32 +1,28 @@
-<div class=" bg-light text-center p1">
+<div class=" bg-light p1">
     <div class="content content1">
-<h3 class="text-muted">Tu És Soberano</h3>
-<h5>Asaph Borba</h5>
+<h3>{{ titulo }}</h3>
+<h5>{{ banda }}</h5>
 <!-- Colocar um sinal de " + " em cada nota para aumentar meio tom quando acionado no tom-->
 
 <!-- =========== TOM =====================-->
-<button class="btn btn-outline-secondary dropdown-toggle" 
+<strong class="mr-2"> Tom : </strong> <button class="btn btn-outline-secondary dropdown-toggle" 
 type="button" data-toggle="dropdown" aria-haspopup="true" 
-aria-expanded="false">Tom</button> {{tom}}
+aria-expanded="false"> {{ original }} </button>
 
 <div class="dropdown-menu">
-  <a class="dropdown-item" (click)="trocaCifra('C')">C</a> <a class="dropdown-item" (click)="trocaCifra('C#')">C# | Db</a>
-  <a class="dropdown-item" (click)="trocaCifra('D')">D</a> <a class="dropdown-item" (click)="trocaCifra('D#')">D# | Eb</a>
+  <a class="dropdown-item" (click)="trocaCifra('C')">C</a> <a class="dropdown-item" (click)="trocaCifra('C#')">C# </a>
+  <a class="dropdown-item" (click)="trocaCifra('D')">D</a> <a class="dropdown-item" (click)="trocaCifra('D#')">Eb </a>
   <a class="dropdown-item" (click)="trocaCifra('E')">E</a> 
-  <a class="dropdown-item" (click)="trocaCifra('F')">F</a> <a class="dropdown-item" (click)="trocaCifra('F#')">F# | Gb</a>
-  <a class="dropdown-item" (click)="trocaCifra('G')">G</a> <a class="dropdown-item" (click)="trocaCifra('G#')">G# | Ab</a>
-  <a class="dropdown-item" (click)="trocaCifra('A')">A</a> <a class="dropdown-item" (click)="trocaCifra('A#')">A# | Bb</a>
+  <a class="dropdown-item" (click)="trocaCifra('F')">F</a> <a class="dropdown-item" (click)="trocaCifra('F#')">F# </a>
+  <a class="dropdown-item" (click)="trocaCifra('G')">G</a> <a class="dropdown-item" (click)="trocaCifra('G#')">Ab </a>
+  <a class="dropdown-item" (click)="trocaCifra('A')">A</a> <a class="dropdown-item" (click)="trocaCifra('A#')">Bb</a>
   <a class="dropdown-item" (click)="trocaCifra('B')">B</a>
   <div role="separator" class="dropdown-divider"></div>
-  <a class="dropdown-item" href="#">Original</a>
+  <a class="dropdown-item"(click)="trocaCifra(original)">Original: {{original}}</a>
 </div>
 </div><br>
 <!-- =========== Música ====================-->
 
-<div class="text-center" *ngFor="let music of musics" >
-   
-  <p [innerHTML]="music.endereco"></p>
-
-</div>
-<h2>MusicaC</h2>
-<p [innerHTML]="musicaC"></p>
+   <div class="text-left" >
+    <p class="divmaster" [innerHTML]="musicaAlterada"></p>
+   </div>
