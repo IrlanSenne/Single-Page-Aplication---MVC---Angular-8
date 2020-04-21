@@ -1,14 +1,13 @@
 import { Component, OnInit} from '@angular/core';
 import { CrudService } from '../crud.service';
 import {  ActivatedRoute } from '@angular/router';
-import { delay } from 'rxjs/operators';
 
 @Component({
   selector: 'app-cifra',
-  templateUrl: './cifra.component.html',
-  styleUrls: ['./cifra.component.css']
+  templateUrl: './cifra-dt.component.html',
+  styleUrls: ['./cifra-dt.component.css']
 })
-export class CifraComponent implements OnInit {
+export class CifraDtComponent implements OnInit {
 
 // Objeto do Banco
 musics: any[] 
@@ -268,7 +267,7 @@ constructor( private crudService: CrudService,
 
   ngOnInit(){
  
-  this.crudService.getMusic().subscribe((data:any[]) => {
+  this.crudService.getDt().subscribe((data:any[]) => {
            
     this.musics = data;
     var id= this.route.snapshot.params['id'] - 1
@@ -287,30 +286,6 @@ constructor( private crudService: CrudService,
     else if ((this.original == 'B') || (this.original == 'G#m')){ this.tom_B(id ); }    
 
    });
-
-   //====================== DT =====================
-
-  
-  this.crudService.getMusic().subscribe((data:any[]) => {
-
-    this.musics = data;
-    var id= this.route.snapshot.params['id'] - 1
-    this.original = this.musics[id ].tom
-    this.titulo = this.musics[id ].titulo
-    this.banda = this.musics[id ].banda
-    this.musicaAlterada = this.musics[id ].cifra.replace(/<b>/g, "<b><font color='red'>").replace(/<\/b>/g, "</font></b>")
-   
-     // Define o tom de origem - falta pegar id da música
-         if ((this.original == 'C') || (this.original == 'Am')){ this.tom_C(id ); }             
-    else if ((this.original == 'D') || (this.original == 'Bm')){ this.tom_D(id ); }
-    else if ((this.original == 'E') || (this.original == 'C#m')){ this.tom_E(id ); }
-    else if ((this.original == 'F') || (this.original == 'Dm')){ this.tom_F(id ); }
-    else if ((this.original == 'G') || (this.original == 'Em')){ this.tom_G(id ); }
-    else if ((this.original == 'A') || (this.original == 'F#m')){ this.tom_A(id ); }
-    else if ((this.original == 'B') || (this.original == 'G#m')){ this.tom_B(id ); }    
-
-   });
-
 
 }
 

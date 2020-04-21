@@ -1,35 +1,89 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" routerLink="/">
-  <img src="assets/logo3.png" alt="Fire Cifras">
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<nav class="nav navbar-expand-sm  navbar-dark  fundo">
 
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-    <ul class="navbar-nav mr-auto mt-2 mt-lg-0 ">
+  <div class="row mr-5 ">
+    <div class="col-9">
+      <a class="navbar-brand" routerLink="/">
+        <img src="assets/logo.png" alt="Fire Cifras" >
+     </a>
+    </div>
+    <div class="col-3 text-left">
+      <button class="navbar-toggler float-right mt-4" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+     </button>
+    </div>
+  </div>
+
+  <div  class=" collapse navbar-collapse marginDiv" id="navbarTogglerDemo02">
+    <ul class="navbar-nav mr-auto mt-2 mt-sm-0  ">
       <li class="nav-item " routerLinkActive="active">
         <a class="nav-link ml-3 mr-3 a1 " routerLink="/musicas">Músicas </a>
       </li>
       <li class="nav-item" routerLinkActive="active">
         <a class="nav-link ml-3 a1" routerLink="/sobre">Sobre</a>
       </li>
+      <li class="nav-item " routerLinkActive="active">
+        <a class="nav-link ml-3 mr-3 a1 " routerLink="/mensagem">Mensagem </a>
+      </li>
      
     </ul>
-  
   </div>
+
 </nav>
 
 
-  <!-- Footer -->
-
-
-<div class="divMaster">
+<div>
   <router-outlet></router-outlet>
 </div>
-<footer class="footer mt-auto mb-4">
-  <div class="bg-light text-muted text-center" >
-   "Enquanto houver fôlego, louve ao Senhor"
-  </div>
 
+
+<footer class="mainfooter " role="contentinfo">
+  <div class="footer-middle">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-6">
+        <!--Column1-->
+        <div class="footer-pad text-center">
+          <h4>PÁGINAS </h4>
+          <ul class="list-unstyled">
+            <li><a href="#"></a></li>
+            <li><a routerLink="/">Home</a></li>
+            <li><a routerLink="/musicas">Músicas</a></li>
+            <li><a routerLink="/sobre">Sobre</a></li>
+            <li><a href="#">Mensagem</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <!--Column1-->
+        <div class="footer-pad text-center">
+          <h4>MAIS ACESSADAS</h4>
+          <ul class="list-unstyled">
+            <li><a routerLink="/diante-do-trono">Diante do trono</a></li>
+            <li><a routerLink="/corinhos">Corinhos</a></li>
+            <li><a href="#">Pr. Antonio Cirilo</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Webmaster</a></li>
+          </ul>
+        </div>
+      </div>
+      
+    	<div class="col-md-4 text-center">
+    		<h4>DOAÇÕES</h4>
+            
+             <a id="imgPay" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=7D6H4S7EA6FEC&currency_code=BRL&source=url"
+                title="PayPal"><img src="assets/donate.png" alt="Fire Cifras - Doações"></a>
+                <img id="imgQR" src="assets/qr.png" alt="Doar para Fire cifras com QR-CODE">
+            	
+		</div>
+    </div>
+	<div class="row">
+		<div class="col-md-12 copy">
+			<p class="text-center">&copy; Copyright 2020 - Fire Cifras.  By <strong>Irlan Senne</strong>.</p>
+		</div>
+	</div>
+
+
+  </div>
+  </div>
 </footer>

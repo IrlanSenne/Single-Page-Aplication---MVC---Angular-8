@@ -1,24 +1,81 @@
 .a1{
-    font-size: 20px;
- 
+    font-size: 20px; 
 }
 .a1:hover{
-    background-color: tomato;
-    border-radius: 10px;
-    padding: 10px;
-}
-nav{
-    margin: 10px;  
-
-}
-.divMaster{
-    min-width: 100%;
-    min-height: 100%;
+    background-color: rgb(107, 100, 99);
+    border-radius: 10px;  
 }
 img{
-    width:100%;
+   width: 100%;
+   padding: 1px;
 }
-
+#imgPay{
+  width: 40%;
+}
+#imgQR{
+  width: 35%;
+  margin-bottom: 20px;
+}
 a{
-    letter-spacing: 3px;
+    letter-spacing: 3px;  
 }
+.fundo{
+    background-color: #0A0B10;
+    border-bottom: 5px solid rgba(211, 177, 177, 0.1);
+}
+footer {
+  width: 100%;
+    background: #16222A;
+    background: -webkit-linear-gradient(59deg, #FBB33F, #D53D0C);
+    background: linear-gradient(59deg, #FBB33F, #D53D0C);
+    color: white;
+    margin-top:50px;
+  }
+  
+  footer a {
+    color: #fff;
+    font-size: 14px;
+    transition-duration: 0.2s;
+  }
+  
+  footer a:hover {
+    color: rgb(228, 27, 13);
+    text-decoration: none;
+  }
+  
+  .copy {
+    font-size: 12px;
+    padding: 10px;
+    border-top: 1px solid #FFFFFF;
+  }
+  
+  .footer-middle {
+    padding-top: 2em;
+    color: white;
+  }
+
+       @media  screen and (min-width : 750px) {
+        nav ul{
+          position: absolute;
+          left: 40%;
+        
+        }
+        @media  screen and (min-width : 800px) {
+          nav ul{
+            position: absolute;
+            left: 55%;
+          
+          }
+            }
+          }
+          @media  screen and (min-width : 950px) {
+            nav ul{
+              position: absolute;
+              left: 65%;
+            
+            }
+              }
+
+  
+  
+  

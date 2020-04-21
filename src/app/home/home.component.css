@@ -1,50 +1,114 @@
-h1{
-    font-size: 70px;
-    font-family: 'Amatic SC', cursive;
-    color: #fff;
-  
-   padding-top: 30px;
-}
-h2{
-    font-size:35px;
-    margin-bottom: 100px;
-    font-family: 'Amatic SC', cursive;
-    color: #fff;
-}
-p{
-    color: white
-}
+
+
 .divMaster{
     text-align: center;
-    display: block;
- 
-    min-height: 500px;
+    display: block; 
+    min-height: 400px;
     background-image: url('/assets/violao2.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center 70%;
-    background-attachment: fixed;
-  
+    background-attachment: fixed;  
+}
+h1{
+    font-size: 25px;
+    font-family: 'Amatic SC', cursive; 
+  letter-spacing: 5px;
+   padding-top: 50px;
+}
+h2{
+    font-size:15px;
+    margin-bottom: 80px;
+    font-family: 'Amatic SC', cursive;    
+    letter-spacing: 5px;
+    font-weight: bold;
+}
+p{
+    color: white
+}
 
-  
-}
-.btn1{
-    margin: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    width: 150px;
-    background-color: #2CC990;
-    border-radius: 10px;
-    color: white;
-    letter-spacing: 3px;
-}
 input{
-    width: 100%;
-    background-color: rgba(247, 233, 231,0.1);
-    border-radius: 10px;
-    font-size: 30px;
-    color: white;
+    width: 70%;
+    height: 35px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    background-color: rgba(247, 233, 231,0.03);
+    border-radius: 10px;   
+    font-size: 17px;
+    text-align: center;
+    color: white;   
+    outline: none;
+    font-family: 'Baloo Bhaina 2', cursive;   
+    left: 15%;
 }
+.form-control {
+    background-color:rgba(3, 3, 3, 0.2);
+    outline: none;   
+}
+#divIcon{
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    padding: 5px 10px;
+}
+textarea:focus, input:focus, select:focus {
+    box-shadow: 0 0 0 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: 0;
+    color: rgba(235, 227, 227, 0.7);
+} 
+#imgPay{
+    width: 50%;
+}
+
+i{
+    color: white;
+    margin-left: 20px;
+    cursor: pointer;
+ 
+}
+
+p{
+    letter-spacing: 1.5px;
+    font-size: 14px;
+    margin-top: 10px;
+    font-family: 'Baloo Bhaina 2', cursive;
+
+}
+
+
+/* PESQUISA*/
+a{
+    color: rgb(58, 15, 7);
+}
+.search-bar{
+    opacity: 0;
+}
+
+
+  /* ====================================== */
+
+@media  screen and (min-width : 800px) {
+    
+   h1{
+       font-size: 50px;
+       margin-bottom: 30px;
+       margin-top: -20px;
+     }
+     h2{
+         font-size: 1.5em;
+         margin-top: -10px;
+         margin-bottom: 110px;
+     }
+     .divMaster {
+        min-height: 550px;
+     }
+     i{
+        margin-top: -20px;
+     }
+     }

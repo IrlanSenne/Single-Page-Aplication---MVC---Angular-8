@@ -2,9 +2,8 @@
   "name": "cifra",
   "version": "0.0.0",
   "scripts": {
-  
     "ng": "ng",
-    "start": "ng serve --proxy-config proxy.conf.js" ,
+    "start": "ng serve --proxy-config proxy.conf.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -18,12 +17,14 @@
     "@angular/core": "~8.2.14",
     "@angular/fire": "^5.4.2",
     "@angular/forms": "~8.2.14",
+    "@angular/localize": "^9.1.2",
     "@angular/platform-browser": "~8.2.14",
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "~8.2.14",
     "bootstrap": "^4.4.1",
     "firebase": "^7.12.0",
     "jquery": "^3.4.1",
+    "ngx-bootstrap": "^5.6.1",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"

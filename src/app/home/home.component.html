@@ -1,12 +1,34 @@
-<div class="divMaster ">
-  <h1>"Tudo quanto tem fôlego louve ao Senhor. Louvai ao Senhor."</h1>
-  <h2>- Salmos 150:6</h2>
-   
-      <input class="col-9" type="search" placeholder="Pesquisar música" ><br>
-          <button class="btn1" type="submit">Pesquisar</button>
-    
+<section class="divMaster ">
+  <h1 class="text-muted">Tudo quanto tem fôlego louve ao Senhor. Louvai ao Senhor.</h1>
+  <h2 class="text-muted">"Salmos 150:6"</h2>
+ 
+  <i (click)="aumentaDiminui()" [@lupa]="lupaState" class="material-icons ">search</i>
+
+  <div class=" text-center">   
+
+    <input class="form-control col-9 search-bar" appAutofocus [typeahead]="titulo" id="myInput" autocomplete="off"
+    [(ngModel)]="pesquisa"  [typeaheadItemTemplate]="musicas" [@toggleSearch]="searchBarState"
+    typeaheadOptionField="titulo">
+  
+    <ng-template  #musicas let-musica="item" >      
+        <a id="resultado" [routerLink]="[musica.url, musica.id ]">
+          {{musica.titulo }} - <strong>{{musica.banda}}</strong>
+        </a>      
+      </ng-template>     
+     
   </div>
 
-<div>
+     
+    <p *ngIf="!informaation">Clique na lupa para pesquisar</p>
+    <p *ngIf="informaation">Digite a cifra que deseja</p>
 
-</div>
+   
+  
+    
+   
+
+
+  </section>
+
+
+

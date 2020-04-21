@@ -8,14 +8,11 @@ font-family: 'Paytone One', sans-serif;
 
 
 */
-body{
-    padding: 10px;
 
-	
 
-  
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
 }
-footer{    
-    font-family: 'Josefin Sans', sans-serif;
-   
-}
+
