@@ -288,7 +288,7 @@ constructor( private crudService: CrudService,
 
    });
 
-   //====================== DT =====================
+   //====================== Corinhos =====================
 
   
   this.crudService.getMusic().subscribe((data:any[]) => {

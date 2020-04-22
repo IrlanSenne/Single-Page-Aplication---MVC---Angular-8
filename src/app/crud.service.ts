@@ -16,6 +16,9 @@ export class CrudService {
   getDt(){
     return this.http.get<any[]>('/api/angularcrud/listDt.php')
   }
+  getMorada(){
+    return this.http.get<any[]>('/api/angularcrud/listMorada.php')
+  }
 /*=====================================================
                    C
 =====================================================*/

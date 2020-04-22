@@ -11,6 +11,7 @@ export class MusicaComponent implements OnInit {
   //Numero de músicas
 numeroMusicas:number
 numeroMusicasDT:number
+numeroMorada: number
 
 
   constructor( private crudService: CrudService) { }
@@ -18,6 +19,7 @@ numeroMusicasDT:number
   ngOnInit() {
     this.crudService.getMusic().subscribe(musicas => this.numeroMusicas = musicas.length)
     this.crudService.getDt().subscribe(dt => this.numeroMusicasDT = dt.length)
+    this.crudService.getMorada().subscribe(morada => this.numeroMorada = morada.length)
   }
 
 }

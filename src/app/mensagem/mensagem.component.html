@@ -1,0 +1,44 @@
+<div class="backGround">
+    <form [formGroup]="orderForm" novalidate >
+    <!--Nome-->    
+ <div class="container form-group divMaster ">
+    <h1 class="text-center ">Mensagem</h1>
+      <div class="col-12 mb-2">
+          <input type="text" class="form-control " #name  formControlName="name" 
+           placeholder="Nome">
+           <div *ngIf="!this.orderForm.get('name').valid && this.orderForm.get('name').touched"
+            class="alert-danger campoObg"><i class="medium material-icons">info</i><strong> Campo Obrigatório</strong></div>
+            <div *ngIf="this.orderForm.get('name').valid && this.orderForm.get('name').touched"
+            class="alert-success campoObg"><i class="medium material-icons">check</i><strong> Ok</strong></div>
+      </div>
+      <!--Email-->
+      <div class="col-12 mb-2">
+          <input type="text" class="form-control " #email formControlName="email" 
+           placeholder="E-mail" >
+           <div *ngIf="!this.orderForm.get('email').valid && this.orderForm.get('email').touched"
+            class="alert-danger campoObg"><i class="medium material-icons">info</i><strong> Email inválido</strong></div>
+            <div *ngIf="this.orderForm.get('email').valid && this.orderForm.get('email').touched"
+            class="alert-success campoObg"> <i class="medium material-icons">check</i><strong> Ok</strong></div>
+      </div>
+    </div>
+    <div class="container form-group divMaster">
+        <div class="col-12">
+      <textarea type="text" class="form-control " #mensagem formControlName="mensagem" 
+      placeholder="Mensagem" ></textarea>
+      <div *ngIf="!this.orderForm.get('mensagem').valid && this.orderForm.get('mensagem').touched"
+       class="alert-danger campoObg"><i class="medium material-icons">info</i><strong> Mínimo 5 caracteres</strong></div>
+       <div *ngIf="this.orderForm.get('mensagem').valid && this.orderForm.get('mensagem').touched"
+       class="alert-success campoObg">  <i class="medium material-icons">check</i><strong> Ok</strong></div>
+    </div>
+    </div>
+   
+    <div class=" container form-group  divMaster text-center">
+        <button  class="btn btn-success "
+        [disabled]="!orderForm.valid ">
+        <i class="small material-icons">send</i> Enviar
+      </button>
+    </div>
+
+</form>
+</div>
+

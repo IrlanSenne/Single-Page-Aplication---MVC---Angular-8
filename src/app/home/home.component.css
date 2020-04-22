@@ -12,20 +12,20 @@
     background-attachment: fixed;  
 }
 h1{
-    font-size: 25px;
-    font-family: 'Amatic SC', cursive; 
+    font-size: 25px;  
   letter-spacing: 5px;
    padding-top: 50px;
+   font-weight: 600;
+   font-family: 'Amatic SC', sans-serif; 
+   opacity: 0.5;
 }
 h2{
     font-size:15px;
-    margin-bottom: 80px;
-    font-family: 'Amatic SC', cursive;    
+    margin-bottom: 80px;   
     letter-spacing: 5px;
-    font-weight: bold;
-}
-p{
-    color: white
+    font-weight: 600;
+    font-family: 'Amatic SC', sans-serif; 
+    opacity: 0.8;
 }
 
 input{
@@ -74,10 +74,11 @@ i{
 }
 
 p{
+    font-family: 'Baloo Bhaina 2', cursive;
     letter-spacing: 1.5px;
     font-size: 14px;
-    margin-top: 10px;
-    font-family: 'Baloo Bhaina 2', cursive;
+    margin-top: 10px;  
+    color: white;
 
 }
 

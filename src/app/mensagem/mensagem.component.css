@@ -1,0 +1,54 @@
+h1{
+    padding: 10px;
+    font-weight: bold;
+    font-family: 'Amatic SC', cursive; 
+    color: #D53D0C;
+    background-color: rgb(255, 255, 255, 0.7);
+    letter-spacing: 1.5;
+}
+.backGround{
+    background-image: url('/assets/guitar.jpg');
+    background-attachment: fixed;
+    background-size: cover ;
+    background-repeat: no-repeat;
+    background-position: top 10%;
+}
+
+.divMaster{
+  margin: 10px;
+  margin-top: 0px;
+   padding: 10px;
+    font-family: 'Baloo Chettan 2', cursive;
+}
+.ng-invalid.ng-touched:not(form) {
+    border: 1px solid #f00;
+}
+.ng-valid.ng-touched:not(form) {
+    border: 1px solid rgb(28, 112, 28);
+}
+.campoObg{
+    font-size: 15px;
+    font-family: 'Baloo Bhaina 2', cursive;
+    
+}
+
+textarea{
+    height: 150px;
+    font-family: 'Baloo Bhaina 2', cursive;
+    background-color: rgba(243, 240, 240, 0.8);
+}
+input{
+    font-family: 'Baloo Bhaina 2', cursive;
+    background-color: rgba(243, 240, 240, 0.8);
+}
+button{
+    font-family: 'Baloo Bhaina 2', cursive;
+  
+}
+
+@media  screen and (max-width : 500px){
+    .backGround{
+        background-image: url('/assets/guitar2.jpg');
+       
+    }
+}

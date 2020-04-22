@@ -17,6 +17,9 @@ import { DtComponent } from './dt/dt.component';
 import { CifraDtComponent } from './cifra-dt/cifra-dt.component';
 import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MoradaComponent } from './morada/morada.component';
+import { CifraMoradaComponent } from './cifra-morada/cifra-morada.component';
+import { MensagemComponent } from './mensagem/mensagem.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ListaComponent,
     AutofocusDirective,
     DtComponent,
-    CifraDtComponent
+    CifraDtComponent,
+    MoradaComponent,
+    CifraMoradaComponent,
+    MensagemComponent
   ],
   imports: [
     BrowserModule,

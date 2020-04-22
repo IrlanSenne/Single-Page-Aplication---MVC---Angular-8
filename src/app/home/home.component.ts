@@ -84,6 +84,14 @@ searchBarState = 'visible'
   
       }     
     })
+
+     // DADOS Morada    
+     this.crudService.getMorada().subscribe(res => {
+      for(let i=0; i< res.length; i++){
+        this.titulo.push({titulo: res[i].titulo, id: res[i].id , banda: res[i].banda, url: '/morada'})   
+  
+      }     
+    })
  
   
 
