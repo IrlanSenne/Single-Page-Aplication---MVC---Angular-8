@@ -4,18 +4,25 @@
  
   <i (click)="aumentaDiminui()" [@lupa]="lupaState" class="material-icons ">search</i>
 
-  <div class=" text-center">   
-
-    <input class="form-control col-9 search-bar" appAutofocus [typeahead]="titulo" id="myInput" autocomplete="off"
-    [(ngModel)]="pesquisa"  [typeaheadItemTemplate]="musicas" [@toggleSearch]="searchBarState"
-    typeaheadOptionField="titulo">
   
-    <ng-template  #musicas let-musica="item" >      
-        <a id="resultado" [routerLink]="[musica.url, musica.id ]">
-          {{musica.titulo }} - <strong>{{musica.banda}}</strong>
-        </a>      
-      </ng-template>     
-     
+    <div class="col-9 leftt">
+    <input class="form-control search-bar" appAutofocus [typeahead]="titulo" id="myInput" autocomplete="off"
+    [(ngModel)]="pesquisa"  [typeaheadItemTemplate]="musicas" [@toggleSearch]="searchBarState"
+    [isAnimated]="true" typeaheadOptionField="titulo"
+    (typeaheadNoResults)="typeaheadNoResults($event)">
+    <div class="col-9 alert-danger tamanhoDiv " *ngIf="noResult">Nenhum resultado encontrado</div>
+
+   <div class="col-9">
+    <ng-template  #musicas let-musica="item" >  
+      <ul class="custom-list-group">
+          <li #lista class="custom-list-group-item">
+            <a  id="resultado" [routerLink]="[musica.url, musica.id ]">
+              {{musica.titulo }} - <strong>{{musica.banda}}</strong>
+            </a>    
+          </li>  
+        </ul>
+      </ng-template>    
+    </div>
   </div>
 
      

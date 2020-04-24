@@ -42,7 +42,18 @@ input{
     color: white;   
     outline: none;
     font-family: 'Baloo Bhaina 2', cursive;   
-    left: 15%;
+   
+}
+.tamanhoDiv{
+    width: 70%;
+    background-color: rgba(226, 78, 78,0.3);
+    color: rgb(197, 168, 173);
+}
+.leftt{
+    left: 22%;
+    font-family: 'Baloo Bhaina 2', cursive;   
+    font-size: 11px;
+    border-radius: 5px;
 }
 .form-control {
     background-color:rgba(3, 3, 3, 0.2);
@@ -90,8 +101,14 @@ a{
 .search-bar{
     opacity: 0;
 }
-
-
+.custom-list-group {
+    display: flex;       
+    padding-left: 0;
+    margin: 2px;
+    list-style: none;
+    text-align: center;
+  }
+ 
   /* ====================================== */
 
 @media  screen and (min-width : 800px) {
@@ -111,5 +128,8 @@ a{
      }
      i{
         margin-top: -20px;
+     }
+     .leftt{
+         font-size:15px;
      }
      }

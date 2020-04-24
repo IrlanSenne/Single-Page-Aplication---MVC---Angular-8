@@ -33,12 +33,26 @@
     </div>
    
     <div class=" container form-group  divMaster text-center">
-        <button  class="btn btn-success "
-        [disabled]="!orderForm.valid ">
+        <button  class="btn btn-success " (click)="enviar(template)"
+        [disabled]="!orderForm.valid " >
         <i class="small material-icons">send</i> Enviar
       </button>
+      <div [@posModal]="posState" id="posModal" class="alert-success text-center">
+        <strong> Sua mensagem foi enviada com sucesso.</strong>
+       </div>
     </div>
-
+   
 </form>
+
 </div>
 
+
+
+<ng-template #template>
+  <div class="modal-body alert-success text-center">
+   <strong> Sua mensagem foi enviada com sucesso.</strong>
+   <button type="button" class="close pull-right" aria-label="Close" (click)="modalref()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  </div>
+</ng-template>

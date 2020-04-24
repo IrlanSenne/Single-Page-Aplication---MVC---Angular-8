@@ -39,11 +39,15 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 export class HomeComponent implements OnInit {
   informaation: boolean = true
   lupaState = 'small'
-searchBarState = 'visible'
+  searchBarState = 'visible'
   titulo: any[] = []
- queryField: FormControl
- pesquisa: string
+  queryField: FormControl
+  pesquisa: string
+  noResult = false;
 
+ typeaheadNoResults(event: boolean): void {
+  this.noResult = event;
+}
 
 
  aumentaDiminui(){
@@ -92,8 +96,34 @@ searchBarState = 'visible'
   
       }     
     })
- 
-  
+   // DADOS Gabriela Rocha    
+   this.crudService.getGabrielaRocha().subscribe(res => {
+    for(let i=0; i< res.length; i++){
+      this.titulo.push({titulo: res[i].titulo, id: res[i].id , banda: res[i].banda, url: '/gabriela-rocha'})   
+
+    }     
+  })
+   // DADOS Ministério Zoe  
+   this.crudService.getZoe().subscribe(res => {
+    for(let i=0; i< res.length; i++){
+      this.titulo.push({titulo: res[i].titulo, id: res[i].id , banda: res[i].banda, url: '/zoe'})   
+
+    }     
+  })
+   // DADOS Isaias Saas  
+   this.crudService.isaiasSaad().subscribe(res => {
+    for(let i=0; i< res.length; i++){
+      this.titulo.push({titulo: res[i].titulo, id: res[i].id , banda: res[i].banda, url: '/isaias-saad'})   
+
+    }     
+  })
+   // DADOS Casa Worship  
+   this.crudService.casaWorship().subscribe(res => {
+    for(let i=0; i< res.length; i++){
+      this.titulo.push({titulo: res[i].titulo, id: res[i].id , banda: res[i].banda, url: '/casa-worship'})   
+
+    }     
+  })
 
 
   }

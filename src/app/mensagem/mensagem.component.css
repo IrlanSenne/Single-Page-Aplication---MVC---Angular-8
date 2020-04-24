@@ -35,15 +35,19 @@ h1{
 textarea{
     height: 150px;
     font-family: 'Baloo Bhaina 2', cursive;
-    background-color: rgba(243, 240, 240, 0.8);
+    background-color: rgba(240, 183, 130, 0.7);
 }
 input{
     font-family: 'Baloo Bhaina 2', cursive;
-    background-color: rgba(243, 240, 240, 0.8);
+    background-color: rgba(240, 183, 130, 0.7);
 }
 button{
     font-family: 'Baloo Bhaina 2', cursive;
   
+}
+#posModal{
+    opacity: 0;
+    padding: 10px;
 }
 
 @media  screen and (max-width : 500px){

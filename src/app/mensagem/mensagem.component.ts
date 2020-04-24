@@ -1,17 +1,47 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
+import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-mensagem',
   templateUrl: './mensagem.component.html',
-  styleUrls: ['./mensagem.component.css']
+  styleUrls: ['./mensagem.component.css'],
+  animations: [
+    trigger('posModal', [
+      state('hidden', style({
+        opacity: 0,
+        "top": "-510px"
+      })),
+      state('visible', style({
+        opacity: 1,
+        "top": "0px",
+        
+      })),
+      transition('hidden => visible', animate('2000ms 0s ease-in-out'))
+    ])
+  ]
 })
 export class MensagemComponent implements OnInit {
-
+  posState = 'hidden'
   orderForm: FormGroup
   emailPattern= /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
 
-  constructor( private formBuilder: FormBuilder) { }
+  modalRef: BsModalRef;
+  
+  constructor( private formBuilder: FormBuilder,
+               private modalService: BsModalService,
+              ) { }
+
+  modalref(){
+    this.modalRef.hide()
+   this.posState = 'visible'
+ }            
+  enviar(template: TemplateRef<any>) {    
+   
+      this.modalRef = this.modalService.show(template);
+      this.orderForm.reset()
+  }
 
   ngOnInit() {
     this.orderForm = this.formBuilder.group({

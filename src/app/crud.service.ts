@@ -19,6 +19,18 @@ export class CrudService {
   getMorada(){
     return this.http.get<any[]>('/api/angularcrud/listMorada.php')
   }
+  getGabrielaRocha(){
+    return this.http.get<any[]>('/api/angularcrud/listGabrielaRocha.php')
+  }
+  getZoe(){
+    return this.http.get<any[]>('/api/angularcrud/listZoe.php')
+  }
+  isaiasSaad(){
+    return this.http.get<any[]>('/api/angularcrud/isaiasSaad.php')
+  }
+  casaWorship(){
+    return this.http.get<any[]>('/api/angularcrud/casaWorship.php')
+  }
 /*=====================================================
                    C
 =====================================================*/
