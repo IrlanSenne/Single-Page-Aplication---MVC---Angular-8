@@ -38,6 +38,7 @@ musica_B: any
 // Recebe as variáveis alteradas acima
 musicaAlterada: any
 musicSelecionada : any
+info: boolean = true
 
 constructor( private crudService: CrudService,
   private route: ActivatedRoute
@@ -277,38 +278,15 @@ constructor( private crudService: CrudService,
     this.banda = this.musics[id ].banda
     this.musicaAlterada = this.musics[id ].cifra.replace(/<b>/g, "<b><font color='red'>").replace(/<\/b>/g, "</font></b>")
    
-     // Define o tom de origem - falta pegar id da música
+    
          if ((this.original == 'C') || (this.original == 'Am')){ this.tom_C(id ); }             
     else if ((this.original == 'D') || (this.original == 'Bm')){ this.tom_D(id ); }
     else if ((this.original == 'E') || (this.original == 'C#m')){ this.tom_E(id ); }
     else if ((this.original == 'F') || (this.original == 'Dm')){ this.tom_F(id ); }
     else if ((this.original == 'G') || (this.original == 'Em')){ this.tom_G(id ); }
     else if ((this.original == 'A') || (this.original == 'F#m')){ this.tom_A(id ); }
-    else if ((this.original == 'B') || (this.original == 'G#m')){ this.tom_B(id ); }    
-
-   });
-
-   //====================== Corinhos =====================
-
-  
-  this.crudService.getMusic().subscribe((data:any[]) => {
-
-    this.musics = data;
-    var id= this.route.snapshot.params['id'] - 1
-    this.original = this.musics[id ].tom
-    this.titulo = this.musics[id ].titulo
-    this.banda = this.musics[id ].banda
-    this.musicaAlterada = this.musics[id ].cifra.replace(/<b>/g, "<b><font color='red'>").replace(/<\/b>/g, "</font></b>")
-   
-     // Define o tom de origem - falta pegar id da música
-         if ((this.original == 'C') || (this.original == 'Am')){ this.tom_C(id ); }             
-    else if ((this.original == 'D') || (this.original == 'Bm')){ this.tom_D(id ); }
-    else if ((this.original == 'E') || (this.original == 'C#m')){ this.tom_E(id ); }
-    else if ((this.original == 'F') || (this.original == 'Dm')){ this.tom_F(id ); }
-    else if ((this.original == 'G') || (this.original == 'Em')){ this.tom_G(id ); }
-    else if ((this.original == 'A') || (this.original == 'F#m')){ this.tom_A(id ); }
-    else if ((this.original == 'B') || (this.original == 'G#m')){ this.tom_B(id ); }    
-
+    else if ((this.original == 'B') || (this.original == 'G#m')){ this.tom_B(id ); }     
+    else {this.original = ''; this.info = false}
    });
 
 

@@ -2,6 +2,7 @@ import { Component, OnInit, TemplateRef } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { trigger, state, style, transition, animate } from '@angular/animations';
+import { CrudService } from '../crud.service';
 
 @Component({
   selector: 'app-mensagem',
@@ -31,16 +32,19 @@ export class MensagemComponent implements OnInit {
   
   constructor( private formBuilder: FormBuilder,
                private modalService: BsModalService,
+               private crudService: CrudService
               ) { }
 
   modalref(){
     this.modalRef.hide()
    this.posState = 'visible'
  }            
-  enviar(template: TemplateRef<any>) {    
-   
+  enviar(template: TemplateRef<any>) {   
+    this.crudService.mensagem(this.orderForm.value).subscribe( mensagem => {
       this.modalRef = this.modalService.show(template);
-      this.orderForm.reset()
+      this.orderForm.reset();
+    })
+     
   }
 
   ngOnInit() {

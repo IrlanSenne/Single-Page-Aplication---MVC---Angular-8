@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { CrudService } from '../crud.service';
 import { FormControl } from '@angular/forms';

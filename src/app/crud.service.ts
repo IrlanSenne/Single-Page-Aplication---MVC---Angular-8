@@ -8,7 +8,10 @@ export class CrudService {
 
   constructor(private http: HttpClient) { }
 
- 
+
+  mensagem(mensagem){
+    return this.http.post('/api/angularcrud/mensagem.php', mensagem)
+  }
 
   getMusic(){
     return this.http.get<any[]>('/api/angularcrud/list.php')
@@ -30,6 +33,11 @@ export class CrudService {
   }
   casaWorship(){
     return this.http.get<any[]>('/api/angularcrud/casaWorship.php')
+  }
+
+  cifraDiferente(v){
+    return v.replace(/<b>/g, "<b><font color='red'>")
+    .replace(/<\/b>/g, "</font></b>") 
   }
 /*=====================================================
                    C

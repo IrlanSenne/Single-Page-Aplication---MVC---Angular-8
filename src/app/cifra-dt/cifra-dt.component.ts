@@ -34,9 +34,11 @@ musica_Gs: any
 musica_A: any
 musica_As: any
 musica_B: any
+musica_Diferente: any
 // Recebe as variáveis alteradas acima
 musicaAlterada: any
 musicSelecionada : any
+info: boolean = true
 
 constructor( private crudService: CrudService,
   private route: ActivatedRoute
@@ -83,6 +85,7 @@ constructor( private crudService: CrudService,
       this.original = 'B'
     }
   }
+
 
   tom_C(id){
   var cifraC =  this.musics[id].cifra; this.musica_C  = this.crudService.dodo(cifraC) 
@@ -284,6 +287,7 @@ constructor( private crudService: CrudService,
     else if ((this.original == 'G') || (this.original == 'Em')){ this.tom_G(id ); }
     else if ((this.original == 'A') || (this.original == 'F#m')){ this.tom_A(id ); }
     else if ((this.original == 'B') || (this.original == 'G#m')){ this.tom_B(id ); }    
+    else {this.original = ''; this.info = false}
 
    });
 

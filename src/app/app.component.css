@@ -2,12 +2,17 @@
     font-size: 20px; 
 }
 .a1:hover{
-    background-color: rgb(107, 100, 99);
+    background-color: rgba(238, 89, 40, 0.1);
     border-radius: 10px;  
 }
 img{
    width: 100%;
    padding: 1px;
+}
+#imgLogo{
+  position: relative;
+   width: 100%;
+
 }
 #imgPay{
   width: 40%;
@@ -20,7 +25,8 @@ a{
     letter-spacing: 3px;  
 }
 .fundo{
-    background-color: #0A0B10;
+  background: -webkit-linear-gradient(59deg, #D53D0C, #04050A);
+  background: linear-gradient(59deg,  #D53D0C, #04050A);
     border-bottom: 5px solid rgba(211, 177, 177, 0.1);
 }
 footer {
@@ -62,6 +68,11 @@ footer {
           nav ul{
             position: absolute;
             left: 35%;
+          
+          }
+          #imgLogo{
+            position: relative;
+             width: 40%;
           
           }
          

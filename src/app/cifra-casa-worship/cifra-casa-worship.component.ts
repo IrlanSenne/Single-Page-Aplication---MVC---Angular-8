@@ -37,6 +37,7 @@ export class CifraCasaWorshipComponent implements OnInit {
   // Recebe as variáveis alteradas acima
   musicaAlterada: any
   musicSelecionada : any
+  info: boolean = true
   
   constructor( private crudService: CrudService,
     private route: ActivatedRoute
@@ -284,6 +285,7 @@ export class CifraCasaWorshipComponent implements OnInit {
       else if ((this.original == 'G') || (this.original == 'Em')){ this.tom_G(id ); }
       else if ((this.original == 'A') || (this.original == 'F#m')){ this.tom_A(id ); }
       else if ((this.original == 'B') || (this.original == 'G#m')){ this.tom_B(id ); }    
+      else {this.original = ''; this.info = false}
   
      });
   

@@ -5,9 +5,10 @@
 <!-- Colocar um sinal de " + " em cada nota para aumentar meio tom quando acionado no tom-->
 
 <!-- =========== TOM =====================-->
-<strong class="mr-2"> Tom : </strong> <button class="btn btn-outline-secondary dropdown-toggle" 
+<strong class="mr-2"> Tom : </strong> <button [disabled]="!info" class="btn btn-outline-secondary dropdown-toggle" 
 type="button" data-toggle="dropdown" aria-haspopup="true" 
 aria-expanded="false"> {{ original }} </button>
+<div *ngIf="!info" class="alert-danger">O tom dessa música ainda não pode ser alterado</div>
 
 <div class="dropdown-menu">
   <a class="dropdown-item" (click)="trocaCifra('C')">C - (Am)</a> <a class="dropdown-item" (click)="trocaCifra('C#')">C# </a>

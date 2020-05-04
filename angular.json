@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "cifra"
+  "defaultProject": "cifra",
+  "cli": {
+    "analytics": false
+  }
 }
