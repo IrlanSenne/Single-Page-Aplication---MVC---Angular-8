@@ -1,5 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { CrudService } from '../crud.service';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-lista',
@@ -8,15 +7,6 @@ import { CrudService } from '../crud.service';
 })
 export class ListaComponent implements OnInit {
 
-  @Input() banda: any
-
-
-
-  constructor(private crudService: CrudService) { }
-
-  ngOnInit() {
-
-   
-  }
+  ngOnInit() {}
 
 }
