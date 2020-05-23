@@ -6,7 +6,7 @@
 
   
     <div class="col-9 leftt">
-    <input class="form-control search-bar" appAutofocus [typeahead]="titulo" id="myInput" autocomplete="off"
+    <input class="form-control search-bar" appAutofocus [typeahead]="bandas_list" id="myInput" autocomplete="off"
     [(ngModel)]="pesquisa"  [typeaheadItemTemplate]="musicas" [@toggleSearch]="searchBarState"
     [isAnimated]="true" typeaheadOptionField="titulo"
     (typeaheadNoResults)="typeaheadNoResults($event)">
@@ -16,7 +16,7 @@
     <ng-template  #musicas let-musica="item" >  
       <ul class="custom-list-group">
           <li #lista class="custom-list-group-item">
-            <a  id="resultado" [routerLink]="[musica.url, musica.id ]">
+            <a  id="resultado" [routerLink]="['/cifra', musica.banda, musica.id ]">
               {{musica.titulo }} - <strong>{{musica.banda}}</strong>
             </a>    
           </li>  

@@ -3,13 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
 import { CifraComponent } from './cifra/cifra.component';
-import { CifraDtComponent } from './cifra-dt/cifra-dt.component';
-import { CifraMoradaComponent } from './cifra-morada/cifra-morada.component';
-import { CifraGabrielaRochaComponent } from './cifra-gabriela-rocha/cifra-gabriela-rocha.component';
-import { CifraZoeComponent } from './cifra-zoe/cifra-zoe.component';
-import { CifraIsaiasSaadComponent } from './cifra-isaias-saad/cifra-isaias-saad.component';
-import { CifraCasaWorshipComponent } from './cifra-casa-worship/cifra-casa-worship.component';
-import { LazyModule } from './lazy/lazy.module';
 
 
 
@@ -27,13 +20,7 @@ const routes: Routes = [
     m => m.MensagemModule)
 },
  // Cifras
-  { path : 'corinhos/:id', component: CifraComponent},
-  { path : 'dt/:id', component: CifraDtComponent},
-  { path : 'morada/:id', component: CifraMoradaComponent},
-  { path : 'gabriela-rocha/:id', component: CifraGabrielaRochaComponent},
-  { path : 'zoe/:id', component: CifraZoeComponent},
-  { path : 'isaias-saad/:id', component: CifraIsaiasSaadComponent},
-  { path : 'casa-worship/:id', component: CifraCasaWorshipComponent},
+  { path : 'cifra/:banda/:id', component: CifraComponent}
 ];
 
 @NgModule({

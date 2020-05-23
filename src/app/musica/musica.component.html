@@ -1,28 +1,10 @@
  <section>
      <div class="divMaster" >
         <h1 class="text-center">Músicas</h1>
-        <h6 *ngIf="numeroMorada > 0"><a [routerLink]="['./morada']" class="list-group-item list-group-item-action">Morada
-            <span class="badge badge-warning badge-pill float-right">{{numeroMorada}}</span>
-        </a> </h6>  
-     <h6 *ngIf="numeroGabrielaRocha > 0"><a [routerLink]="['./gabriela-rocha']" class="list-group-item list-group-item-action">Gabriela Rocha
-            <span class="badge badge-warning badge-pill float-right">{{numeroGabrielaRocha}}</span>
-        </a> </h6>  
-        <h6 *ngIf="numeroMusicas > 0"><a [routerLink]="['./corinhos']" class="list-group-item list-group-item-action">Corinhos
-            <span class="badge badge-warning badge-pill float-right">{{numeroMusicas}}</span>
+        <h6 *ngFor="let musica of musicas"><a [routerLink]="['./lista', musica.b]"
+             class="list-group-item list-group-item-action">{{musica.b}}
+            <span class="badge badge-warning badge-pill float-right">{{musica.q}}</span>
         </a> </h6>
-        <h6 *ngIf="numeroMusicasDT > 0"><a [routerLink]="['./diante-do-trono']" class="list-group-item list-group-item-action">Diante do trono
-            <span class="badge badge-warning badge-pill float-right">{{numeroMusicasDT}}</span>
-        </a> </h6>  
-        <h6 *ngIf="numeroZoe > 0"><a [routerLink]="['./zoe']" class="list-group-item list-group-item-action">Ministério Zoe
-            <span class="badge badge-warning badge-pill float-right">{{numeroZoe}}</span>
-        </a> </h6>  
-        <h6 *ngIf="isaiasSaad > 0"><a [routerLink]="['./isaias-saad']" class="list-group-item list-group-item-action">Isaias Saad
-            <span class="badge badge-warning badge-pill float-right">{{isaiasSaad}}</span>
-        </a> </h6>  
-        <h6 *ngIf="casaWorship > 0"><a [routerLink]="['./casa-worship']" class="list-group-item list-group-item-action">Casa Worship
-            <span class="badge badge-warning badge-pill float-right">{{casaWorship}}</span>
-        </a> </h6>  
-        
      </div>     
     
 </section>
